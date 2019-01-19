@@ -1,0 +1,26 @@
+﻿<Window x:Class="client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:client"
+        mc:Ignorable="d"
+        Title="SET secret chat" Height="350" Width="525" MinWidth="425" MinHeight="250"
+        Closing="Window_Closing"
+        SizeChanged="Window_SizeChanged">
+    <Grid>
+        <Label Margin="6,7,0,0">
+            <RadioButton Content="Encrypt" Checked="RadioButton_Checked"/>
+        </Label>
+        <TextBox Name="NameField" HorizontalAlignment="Left" Height="23" Margin="109.096,10,0,0" TextWrapping="Wrap" Text="Enter your name" VerticalAlignment="Top" Width="120" KeyDown="NameField_KeyDown" GotFocus="NameField_GotFocus" MaxLines="1" MaxLength="16"/>
+        <Button Content="Exit" HorizontalAlignment="Right" Margin="225,11,11,0" VerticalAlignment="Top" Width="75" Click="Exit" RenderTransformOrigin="0.023,0.699" />
+        <Button Name="BtnConnect" Content="Connect" HorizontalAlignment="Right" Margin="225,11,95,0" VerticalAlignment="Top" Width="75" Click="Connect"/>
+        <TextBox Name="ChatHistory" TextWrapping="Wrap" Text="" 
+                 Margin="10,42,10,75"
+                 VerticalScrollBarVisibility="Auto"
+                 IsReadOnly="True" TextChanged="ChatHistory_TextChanged" />
+        <Button Content="Send" HorizontalAlignment="Right" Margin="0,0,11,11" VerticalAlignment="Bottom" Width="87.87" Height="56" Click="Send"/>
+        <TextBox Name="Message" Height="56" Margin="10,0,108,11" Width="auto" TextWrapping="Wrap" Text="Enter your message" VerticalAlignment="Bottom" KeyDown="ChatHistory_KeyDown" GotFocus="Message_GotFocus" />
+
+    </Grid>
+</Window>
